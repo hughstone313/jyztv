@@ -26,7 +26,7 @@ label{word-wrap: break-word; word-break: break-all;}
 <script src="/js/jyz.js"></script>
 </head>
 <body>
-<div class="header">有时候，难走的路才是活路。</div>
+<div class="header" id="header"><span>有</span><span>时</span><span>候</span><span>，</span><span>难</span><span>走</span><span>的</span><span>路</span><span>才</span><span>是</span><span>活</span><span>路</span><span>。</span></div>
 <div class="main">
     <div class="tab" data-url="http://www.baidu.com/">百度</div>
     <div class="tab" data-url="http://www.taobao.com/">淘宝</div>
@@ -63,6 +63,8 @@ jyz.ready(()=>{
             window.open(this.getAttribute('data-url'),'_blank');
         });
     }
+    var headers=jyz.id('header').getElementsByTagName('span');
+
 });
 </script>
 </body>
