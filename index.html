@@ -54,7 +54,7 @@ label{word-wrap: break-word; word-break: break-all;}
     <div class="tab" data-url="https://tool.css-js.com/">js压缩</div>
     <div class="tab" data-url="https://c.runoob.com/more/svgeditor/">svg在线编辑</div>
 </div>
-<div class="footer">jyz.tv 域名闲置，带价出售。<a href="http://www.beian.miit.gov.cn" ref="nofollow">豫ICP备15013560号</a> <script>document.write('联系QQ:371937443');</script></div>
+<div class="footer">jyz.tv 域名闲置，带价出售。<a href="javascript:;" ref="nofollow">京ICP备36013873号</a> <script>document.write('联系QQ:371937443');</script></div>
 <script>
 jyz.ready(()=>{
     var tab=document.getElementsByClassName('tab');
@@ -63,8 +63,16 @@ jyz.ready(()=>{
             window.open(this.getAttribute('data-url'),'_blank');
         });
     }
+    var jhm=new Array();
     var headers=jyz.id('header').getElementsByTagName('span');
-
+    for(var i=0;i<headers.length;i++){
+        headers[i].addEventListener('click',function(){
+            jhm.push(this.innerText);
+        })
+    }
+    if(jhm.join('')=='有活路才是路'){
+        jyz.id('main').style.display='block';
+    }
 });
 </script>
 </body>
