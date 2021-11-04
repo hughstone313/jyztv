@@ -68,10 +68,10 @@ jyz.ready(()=>{
     for(var i=0;i<headers.length;i++){
         headers[i].addEventListener('click',function(){
             jhm.push(this.innerText);
+            if(jhm.join('')=='有活路才是路'){
+                jyz.id('main').style.display='block';
+            }
         })
-    }
-    if(jhm.join('')=='有活路才是路'){
-        jyz.id('main').style.display='block';
     }
 });
 </script>
